@@ -1,10 +1,8 @@
 # SIT725 Project LifeForHomeless
 
-Author: Aman Das(s222418899), Jaskirat Singh(s222470295), Navin Raaj Manivannan(s222569633) and Varun Chaudhary (s222475653)
+Author:Jaskirat Singh(s222470295)
 
 Introduction: "Life for the Homeless" is an initiative that will act as a bridge between the homeless people and the NGO or individuals who are willing to help them. Using the application, we could possibly locate the homeless people and try to give them their daily needs to survive. some of the ways are - most of the restaurant dispose the remaining food by end of the day where these could be collected from them and could help to feed a homeless person like this there could be numerus possibility where the application could branch in future
-
-Prototype : https://app.uizard.io/p/a1cb2c60
 
 The following libraries are imported and used in the code:
 
