@@ -1,0 +1,28 @@
+      /* Center the form on the page */
+      .form-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      /* Add some padding and border to the form */
+      .form-container form {
+        padding: 2rem;
+        border: 1px solid #0a0707;
+        border-radius: 1rem;
+        background-color: rgba(255, 255, 255, 0.752);
+      }
+
+      /* Make the form responsive */
+      @media (max-width: 768px) {
+        .form-container {
+          width: 90%;
+        }
+      }
+      
+      body {
+        background-image: url(https://www.gannett-cdn.com/-mm-/9d3ec0beddc2faa2b0492aaea7499a143ff9a8d0/c=0-258-5077-3126/local/-/media/2018/07/18/NJGroup/AsburyPark/636675260687536083-GettyImages-856576006.jpg);
+        background-size: cover;
+      }
+	  

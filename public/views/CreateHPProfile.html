@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create HP Profile</title>
+
+    <!-- BOOTSTRAP -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+
+    <!-- FONT AWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+    />
+
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="../css/CreateHPProfile.css" />
+    
+    <!-- CUSTOM JS -->
+    <script src="../js/CreateHPprofile.js"></script>
+  </head>
+  <body>
+    <%- include('./common/nav') %>
+    <div class="register-photo">
+      <div class="form-container">
+        <div class="image-holder"></div>
+        <form method="post">
+          <h2 class="text-center">Create HP Profile</h2>
+          <div class="form-group">
+            <input
+              class="form-control"
+              type="text"
+              name="fname"
+              placeholder="First Name"
+              id="fname"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <input
+              class="form-control"
+              type="text"
+              name="lname"
+              placeholder="Last Name"
+              id="lname"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <input
+              class="form-control"
+              type="number"
+              name="age"
+              min="18"
+              placeholder="Age"
+              id="age"
+              required
+            />
+          </div>
+          <div class="dropdown">
+            <button
+              class="btn btn-secondary dropdown-toggle"
+              type="button"
+              id="dropdownMenuButton"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+              value="None"
+            >
+              ID Proof
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">Passport</a>
+              <a class="dropdown-item" href="#">Driver's License</a>
+              <a class="dropdown-item" href="#">Citizenship Certificate</a>
+              <a class="dropdown-item" href="#">Other</a>
+            </div>
+          </div>
+          <input
+              class="form-control"
+              type="text"
+              name="idProof"
+              placeholder="hiddenidProof"
+              id="idProof"
+              value="None"
+              hidden
+            />
+          <div class="form-group">
+            <input
+              class="form-control"
+              type="text"
+              name="idNo"
+              placeholder="ID Number"
+              id="idNo"
+              required
+            />
+          <div class="form-group">
+            <div class="form-check">
+              <label class="form-check-label"
+                ><input class="form-check-input" type="checkbox" id="check" required />I
+                hereby declare that the information provided is true and
+                correct.</label
+              >
+            </div>
+          </div>
+          <div class="form-group">
+            <button
+              class="btn btn-primary"
+              type="submit"
+              id="submitHPProfile"
+            >
+              Create
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- BOOTSTRAP -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

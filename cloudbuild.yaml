@@ -1,0 +1,16 @@
+steps:
+# Build Docker Image
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'gcr.io/${PROJECT_ID}/sit323finalproject:$COMMIT_SHA', '.']
+
+
+# Docker Push
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'gcr.io/${PROJECT_ID}/sit323finalproject:$COMMIT_SHA']
+
+
+- name: 'gcr.io/cloud-builders/kubectl'
+  args: ['set', 'image', 'deployment/mydeployment', 'mynode=gcr.io/sit737-23t1-singh-aa2c30e/sit323finalproject:$COMMIT_SHA']
+  env:
+  - 'CLOUDSDK_COMPUTE_ZONE=us-west1'
+  - 'CLOUDSDK_CONTAINER_CLUSTER=hello-cluster'

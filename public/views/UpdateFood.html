@@ -1,0 +1,103 @@
+<!--********************************************
+Revision History
+
+Version       Name          Date            Description 
+1.0         Navin Raaj    24/01/2023      Created Basic Form
+2.0         Navin Raaj    25/01/2023      Included Nav Bar
+3.0         Navin Raaj    07/02/2023      Included more fields and the realigned design
+*********************************************-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <!-- Bootstrap CSS library -->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"/>
+
+    <!-- animate.css library -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+      integrity="sha512-5hEcn7kqVtYmDc6jHgT9LzRZ/JPDLwGm1V7KyK/fLh3YgDtMbXoKG/ZLQn7+QzZO1p1hDzsv26++/YVXpYxpwg==" crossorigin="anonymous" />
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"/>
+
+    <!-- CUSTOM Css -->
+    <link rel="stylesheet" href="../css/UpdateFood.css" />
+
+    <title>Update Food Quantity</title>
+  </head>
+  <body>
+      <!-- Calling Nav bar from Views/Common/nav.ejs -->
+    <%- include('./common/nav') %>
+      <!-- Form to get the details from restaurant -->
+    <div class="form-container text-center">
+      <form method="post">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="name">Representative Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              name="name"
+              placeholder="Repreasentive Name"
+              required/>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="contact">Contact Number</label>
+            <input
+              type="text"
+              class="form-control"
+              id="contact"
+              name="contact"
+              placeholder="Contact Number"
+              required
+            />
+          </div>
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Type</label>
+            <select class="form-control" id="type" name="type">
+              <option></option>
+              <option>Vegetarian</option>
+              <option>Non Vegetarian</option>
+            </select>
+          </div>
+        <div>
+          <label for="Quantity">Quantity</label>
+          <input
+            type="number"
+            class="form-control"
+            id="Quantity"
+            name="Quantity"
+            min="1"
+            required
+          />
+        </div>
+        <div>
+          <label for="Location"  style="margin-top: 10px;">Location</label>
+          <input
+            type="text"
+            class="form-control"
+            id="Location"
+            name="Location"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <button class="btn btn-primary" type="submit" id="UpdateFood" style="margin-top: 20px;">Update Food</button>
+        </div>
+        
+	   
+    <p>
+      "There is nothing greater than love invested in helping to feed the impoverished living in hunger."
+      <br>
+      ― Wayne Chirisa
+    </p>
+      </form>
+    </div>
+  </body>
+</html>
